@@ -1,0 +1,60 @@
+
+/* ========================================
+   Burger Menu - Кнопка бургер
+   ======================================== */
+
+/* Основной стиль бургера */
+.burger, .burger.home {
+  display: none;
+  position: relative;
+  width: 34px;
+  height: 36px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+/* Полосы бургера (3 линии) */
+.burger span {
+  display: block;
+  height: 4px;
+  width: 100%;
+  background: #000;
+  margin: 7px 0;
+  transition: .5s;
+}
+
+/* Средняя полоса короче (65%) */
+.burger span:nth-child(2) {
+  width: 65%;
+  margin-left: 35%;
+}
+
+/* Бургер для домашней страницы (белые полосы) */
+.burger.home span { background: #ffffff;}
+
+
+/* ========================================
+   Анимация бургера (превращение в крестик)
+   ======================================== */
+
+.burger.active span {
+  position: absolute;
+  width: calc(100%);
+  top: calc(50% - 8px);
+}
+
+.burger.active span:nth-child(1) {
+  transform: rotate(45deg);
+}
+
+.burger.active span:nth-child(3) {
+  transform: rotate(-45deg);
+}
+
+.burger.active span:nth-child(2) {
+  display: none;
+}
+
+
+
+

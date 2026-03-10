@@ -1,0 +1,15 @@
+<svg clip-rule="evenodd" fill-rule="evenodd" image-rendering="optimizeQuality" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" version="1.1" viewBox="0 0 2118 2601.3" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .fil0 {fill:#3043AD;fill-rule:nonzero}
+    .fil1 {fill:#FF9900;fill-rule:nonzero}
+   ]]>
+  </style>
+ </defs>
+ 
+  
+  <path class="fil0" d="m1820.2 1544c76.83-64.29 191.23-54.13 255.52 22.71 64.29 76.83 54.12 191.23-22.71 255.53l-877.61 736.8c-69.12 57.83-168.65 55.39-234.74-1.62l-875.69-735.18c-76.83-64.3-87-178.7-22.71-255.53 64.29-76.84 178.69-87 255.53-22.71l761.2 639.07 761.21-639.07z"/>
+  <path class="fil1" d="m1059 418.25-595.5 499.96 595.5 499.95 595.5-499.95-595.5-499.96zm-992.25 359.36 875.85-735.33c69.11-57.84 168.64-55.39 234.73 1.62l875.69 735.18c76.83 64.29 87 178.71 22.71 255.53-7.52 8.99-15.73 17.05-24.48 24.2l-875.85 735.32c-69.11 57.83-168.64 55.39-234.73-1.61l-875.69-735.19c-76.83-64.29-87-178.7-22.71-255.53 7.52-8.98 15.73-17.05 24.48-24.19z"/>
+ 
+</svg>

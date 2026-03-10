@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<base href="https://fm.dev.lan/">
+<title>HTML Slider 1.0.2</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="template/images/favicon/favicon.ico" rel="shortcut icon" type="image/x-icon">
+<link href="template/images/favicon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+<link href="template/images/favicon/favicon-64x64.png" rel="icon" sizes="64x64" type="image/png">
+<link href="template/css/main.css" rel="stylesheet">
+<!--link href="template/css/slide.css" rel="stylesheet"-->
+<link href="template/css/fade.css" rel="stylesheet">
+<link href="template/css/fonts.css" rel="stylesheet">
+<link href="template/css/font-awesome.min.css" rel="stylesheet">
+<script src="template/js/jquery.min.js"></script>
+<script src="template/js/carousel.min.js"></script>
+
+<script>
+  $(function() {
+     $("#slider").slidercarousel({interval:5000, pause: false});
+  });
+</script>
+
+</head>
+<body>
+
+<!-- Слайдер -->
+<div class="header-slider">
+  <div id="slider" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+    <li data-target="#slider" data-slide-to="0"></li>
+    <li data-target="#slider" data-slide-to="1" class="active"></li>
+    <li data-target="#slider" data-slide-to="2"></li>
+    </ol>
+  <div class="carousel-inner">
+    
+  <div class="carousel-item frame-1 active">
+      <div class="carousel-innerframe">
+        <h2>Форматированный текст 1</h2>
+      </div>
+  </div>
+    
+  <div class="carousel-item frame-2">
+      <div class="carousel-innerframe">
+        <h2>Форматированный текст 2</h2>
+      </div>
+  </div>
+    
+  <div class="carousel-item frame-3">
+      <div class="carousel-innerframe">
+        <h2>Форматированный текст 3</h2>
+      </div>
+  </div>
+    
+  </div>
+    <a class="carousel-item-left carousel-control" href="#slider" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-item-right carousel-control" href="#slider" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span><span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
+</body>
+</html>

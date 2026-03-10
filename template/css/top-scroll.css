@@ -1,0 +1,23 @@
+.top-scroll {
+  display: none;
+  width: 48px;
+  height: 48px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  border-radius: 3px;
+  background-color: var(--color-b);
+  background-image: url(../images/icons/TopScroll.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 25px auto;
+  cursor: pointer;
+  z-index: 200;
+  transition: .3s
+}
+
+.top-scroll:hover{
+  background-color: var(--color-a);
+  transform:translateY(-10px);
+  box-shadow: 0 0 10px rgb(255 255 255 / 15%);
+}

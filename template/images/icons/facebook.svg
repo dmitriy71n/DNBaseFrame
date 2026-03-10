@@ -1,0 +1,17 @@
+<svg clip-rule="evenodd" fill-rule="evenodd" image-rendering="optimizeQuality" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" version="1.1" viewBox="0 0 1665.2 1665.2" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .fil1 {fill:#3869B0}
+    .fil0 {fill:white}
+    .fil2 {fill:white}
+   ]]>
+  </style>
+ </defs>
+ 
+  
+  <path class="fil0" d="m832.6 0c459.84 0 832.61 372.77 832.61 832.61 0 459.83-372.77 832.6-832.61 832.6-459.83 0-832.6-372.77-832.6-832.6 0-459.84 372.77-832.61 832.6-832.61z"/>
+  <rect class="fil1" x="105" y="105" width="1455.2" height="1455.2" rx="727.61" ry="727.61"/>
+  <path class="fil2" d="m609.35 737.44h118.09l-0.81-73c-1.32-120.26 47.19-199.68 169.55-199.68l90.21 5.15v121.05h-74.05c-48.93 5.87-52.91 29.97-52.91 75.69v70.79h126.89l-17.75 123.44h-109.14v339.56h-126.92l-3.72-339.56h-119.44v-123.44z"/>
+ 
+</svg>

@@ -1,0 +1,230 @@
+
+/* ========================================
+   Навигация - Горизонтальное меню (левое)
+   ======================================== */
+
+/* Анимация выпадающего меню */
+@keyframes upsubmenu  {
+  0% { transform: translate(0,100) rotate(0deg) ; opacity: 0;  }
+  100% { transform: translate(0,0) rotate(0deg) ; opacity: 1;  }
+}
+
+/* ========================================
+   Меню (первый уровень)
+   ======================================== */
+.nav-wrapper > ul, .nav-wrapper.home > ul {
+  display: inline-flex;
+  position: relative;
+  gap: 15px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.nav-wrapper > ul > li {
+  display: block;
+  position: relative;
+  width: auto;
+  padding: 7px 0;
+} 
+
+.nav-wrapper > ul > li.parent {
+  padding-right: 14px;
+  background-image: url('../images/icons/marker-down.svg');
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: auto 5px;
+}
+
+.nav-wrapper.home > ul > li.parent {
+  background-image: url('../images/icons/wli-down.svg');
+}
+
+.nav-wrapper > ul > li, 
+.nav-wrapper > ul > li > a {
+  color: var( --color-g);
+  font-family: var(--font-nav);
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 500;
+  text-decoration: none;
+  transition: .2s;
+}
+
+.nav-wrapper.home > ul > li, 
+.nav-wrapper.home > ul > li > a {
+  color: #ffffff;
+}
+
+.nav-wrapper > ul > li:hover, 
+.nav-wrapper > ul > li > a:hover {
+  color: var(--color-g);
+}
+
+.nav-wrapper.home > ul > li:hover, 
+.nav-wrapper.home > ul > li > a:hover {
+  color: #ffffff;
+}
+
+/* Подчеркивание*/
+.nav-wrapper > ul > li::after {
+  position: absolute;
+  content: "";
+  right: 50%;
+  bottom: 4px;
+  transform: translate(50%, 50%);
+  margin: auto;
+  height: 4px;
+  background-color: transparent;
+  width: 0;
+  transition: .2s;
+}
+.nav-wrapper > ul > li:hover::after,
+/*.nav-wrapper > ul > li.active::after,*/
+.nav-wrapper > ul > li.current::after {
+  background-color: var(--color-a);
+  width: 100%;
+}
+/*---Меню End---*/
+
+
+/* ========================================
+   Подменю (второй уровень)
+   ======================================== */
+.nav-wrapper > ul > li > ul {
+  display: none;
+  visibility: hidden;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: var(--width-menu);
+  border-radius: 10px;
+  padding: 5px;
+  background-color:#ffffff;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.18);
+  opacity: 0;
+  animation: upsubmenu .35s ease-in-out;
+  z-index: 2;
+} 
+
+.nav-wrapper > ul > li:hover > ul  {
+  display: block;
+  visibility: visible;
+  opacity: 1; 
+}
+/* Треугольник сверху меню */
+/*.nav-wrapper > ul > li > ul::after {
+  content: " ";
+  bottom: 100%;
+  left: 25px;
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border: solid transparent;
+  border-bottom-color: #201a1a;
+  border-width: 8px;
+  margin-left: -8px;
+}*/
+
+.nav-wrapper > ul > li > ul > li {
+  display: block;
+  width: 100%;
+  position: relative;
+  padding: 7px 10px;
+  border-radius: 4px;
+  background-color: #FFFFFF;
+  transition: .2s;
+}
+
+.nav-wrapper > ul > li > ul > li.deeper.parent {
+  padding-right: 12px;
+  background-image: url('../images/icons/marker-right.svg');
+  background-repeat: no-repeat;
+  background-position: right 5px center;
+  background-size: 5px auto;
+}
+
+.nav-wrapper > ul > li > ul > li:hover {
+  background-color: var(--color-j);  
+}
+
+.nav-wrapper > ul > li > ul > li > a {
+  display: block;
+  width: 100%;
+  color:var(--color-g);
+  font-family: var(--font-subnav);
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  text-decoration: none;
+  transition: .2s;
+}
+/*---Меню > подменю End---*/
+
+/* ========================================
+   Подменю (третий уровень)
+   ======================================== */
+.nav-wrapper > ul > li > ul > li > ul  {
+  display: none;
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: var(--width-menu);
+  border-radius: 10px;
+  padding: 5px;
+  background-color:#ffffff;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.18);
+  opacity: 0;
+  animation: upsubmenu .35s ease-in-out;
+  z-index: 2;
+} 
+
+.nav-wrapper > ul > li > ul > li:hover > ul  {
+  display: block;
+  visibility: visible;
+  opacity: 1;
+}
+
+.nav-wrapper > ul > li > ul > li > ul > li {
+  display: block;
+  width: 100%;
+  position: relative;
+  padding: 7px 10px;
+  border-radius: 4px;
+  background-color: #FFFFFF;
+  transition: .2s;
+}
+
+.nav-wrapper > ul > li > ul > li > ul > li:hover {
+  background-color: var(--color-j);  
+}
+
+.nav-wrapper > ul > li > ul > li > ul > li > a {
+  display: block;
+  width: 100%;
+  color:var(--color-g);
+  font-family:var(--font-subnav);
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  text-decoration: none;
+  transition: .2s;
+}
+/* Треугольник сбоку подменю */
+/*.nav-wrapper > ul > li > ul > li > ul::after {
+  content: " ";
+  top: 18px;
+	right: 100%;
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+  border: solid transparent;
+	border-right-color: var(--color-a);
+	border-width: 8px;
+	margin-top: -8px;
+}*/

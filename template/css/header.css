@@ -1,0 +1,42 @@
+
+.header-wrapper-home {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 800px;
+  /*background-color: var(--color-g);*/
+  background-image: url('../images/bg/image.webp');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.header-wrapper-pages {
+  display: block;
+  width: 100%;
+  padding: 120px 0 15px 0;
+  background-color: var(--color-d);
+}
+
+.header-wrapper-basic {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 800px;
+  background-color: var(--color-body-bg);
+}
+
+
+.header-wrapper-home::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0; 
+    background-image: radial-gradient(circle at 50% 50%, rgba(17,16,25,0.00) 0%, #111019 100%);
+    /*background-image: url(../images/overlays/02.png);
+    background-repeat: repeat;
+    background-position: left top;*/
+    z-index: 0;
+}

@@ -1,0 +1,104 @@
+/*#*/.offer-wrapper {
+  position: fixed;
+  display: none;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99999998;
+}
+
+/*#*/.offer-background {
+  position: fixed;
+  display: none;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,.5);
+  z-index: 99999997;
+}
+
+.offer-window {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  padding: 20px;
+  margin: 0;
+  width: 600px;
+  height: auto;
+  border-radius: 5px;
+  transform: translate(-50%,-50%);
+  box-shadow: 0 0 20px rgb(47 44 80 / 50%);
+  background-color: #fff;
+  z-index: 99999999;
+}
+
+.offer-close_button {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: rgba(255,255,255,.3);
+  cursor: pointer;
+  transition: .25s;
+}
+
+.offer-close_button:hover {
+  background-color: rgba(255,255,255,.5);
+}
+
+.offer-close_button::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-image: url(../images/icons/CloseModalBtn.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 18px auto;
+  -webkit-transform: rotate(0);
+  transform: rotate(0);
+  -webkit-transition: all 250ms linear;
+  transition: .25s;
+}
+
+.offer-window h3 {
+  font-size: 20px;
+}
+
+.offer-window ul {
+  display: block;
+  margin: 5px 0;
+  list-style: none;
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-size: auto 90px;
+}
+
+.offer-window ul li {
+  padding-left: 25px;
+  background-image: url(../images/list/li07.svg);
+  background-repeat: no-repeat;
+  background-position: top 4px left;
+  background-size: auto 14px;
+  color: var(--color-i);
+}
+
+.offer-window p {
+  display: block;
+  padding: 5px 0;
+  line-height: 1.4;
+}
+
+.offer-window a,.offer-window a:visited {
+  color: #116cb1;
+}
+
+.offer-window a:hover {
+  color: #083e67;
+}

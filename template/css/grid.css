@@ -1,0 +1,55 @@
+/* ========================================
+   Grid - Сетка
+   ======================================== */
+
+/* Базовый элемент сетки */
+.item {
+  display: inline-block;
+  width: 100%;
+}
+
+/* Сетка: 2 колонки */
+.cells-2fr {
+   display: grid;
+   width: 100%;
+   grid-template-columns: repeat(2,1fr);
+}
+
+/* Сетка: 3 колонки */
+.cells-3fr, .cells-3fr-a {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(3,1fr);
+}
+
+/* Сетка: 4 колонки */
+.cells-4fr {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(4,1fr);
+}
+
+/* Сетка: 5 колонок */
+.cells-5fr {
+  display: grid;
+  width: 100%;
+  grid-column-gap: 7px;
+  grid-row-gap: 15px;
+  grid-template-columns: repeat(5,1fr);
+}
+
+/* Сетка: 6 колонок */
+.cells-6fr {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(6,1fr);
+}
+
+/* Сетка: 8 колонок */
+.cells-8fr {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(8,1fr);
+}
+
+

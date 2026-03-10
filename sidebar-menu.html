@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<base href="https://fm.dev.lan/">
+<title>HTML Simple accordion 1.0.2</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="template/images/favicon/favicon.ico" rel="shortcut icon" type="image/x-icon">
+<link href="template/images/favicon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+<link href="template/images/favicon/favicon-64x64.png" rel="icon" sizes="64x64" type="image/png">
+<link href="template/css/main.css?v=0" rel="stylesheet">
+<link href="template/css/fonts.css" rel="stylesheet">
+<link href="template/css/font-awesome.min.css" rel="stylesheet">
+<script src="template/js/jquery.min.js"></script>
+
+
+<script>
+$(function() {
+  // Функция для закрытия меню и всех вложенных подменю
+  function closeMenuAndChildren($menu) {
+    $menu.removeClass('active');
+    const $submenu = $menu.next('[class*="sidebar-submenu"]');
+    $submenu.slideUp(300);
+    
+    // Закрываем все вложенные активные меню
+    $submenu.find('[class*="sidebar-menu-level"].active').each(function() {
+      closeMenuAndChildren($(this));
+    });
+  }
+  
+  // Аккордеон меню — универсальный скрипт для всех уровней
+  $('.wrap-menu').on('click', '[class*="sidebar-menu-level"]', function(e) {
+    // Игнорируем level0
+    if ($(this).hasClass('sidebar-menu-level0')) return;
+    
+    e.stopPropagation();
+    
+    const $clicked = $(this);
+    const $submenu = $clicked.next('[class*="sidebar-submenu"]');
+    const isOpening = !$clicked.hasClass('active');
+    
+    // Определяем уровень (1, 2, 3...)
+    const levelMatch = $clicked.attr('class').match(/sidebar-menu-level(\d+)/);
+    if (!levelMatch) return;
+    const level = parseInt(levelMatch[1]);
+    
+    if (isOpening) {
+      // Закрываем другие меню на этом же уровне
+      $clicked.parent().find('.sidebar-menu-level' + level + '.active').each(function() {
+        closeMenuAndChildren($(this));
+      });
+      
+      // Если уровень > 1, закрываем другие подменю на этом уровне внутри текущего родителя
+      if (level > 1) {
+        $clicked.closest('[class*="sidebar-submenu"]').find('.sidebar-menu-level' + level + '.active').each(function() {
+          closeMenuAndChildren($(this));
+        });
+      }
+      
+      // Открываем clicked
+      $clicked.addClass('active');
+      $submenu.slideDown(300);
+    } else {
+      // Закрываем clicked и все вложенные меню
+      closeMenuAndChildren($clicked);
+    }
+    
+    return false;
+  });
+});
+</script>
+
+</head>
+<body>
+
+<!-- Боковое меню аккордеон -->
+<nav class="wrap-menu">
+
+  <div class="sidebar-menu">
+
+  <ul class="sidebar-nav-item">
+    <li class="sidebar-menu-level0"><a href="https://work.xampp.lan/#">Sed ut perspiciatis Level 0</a></li>
+    <li class="sidebar-menu-level0"><a href="https://work.xampp.lan/#">Sed ut perspiciatis Level 0</a></li>
+  </ul>    
+            
+    <ul class="sidebar-menu-item">   
+      <li class="sidebar-menu-level1"><h5>Sed ut perspiciatis Level 1</h5></li>
+      <li class="sidebar-submenu-level1">
+        <ul>
+          <li><a href="#">Sed ut perspiciatis 1</a></li>
+          <li><a href="#">Sed ut perspiciatis 1</a></li>
+          <li><a href="#">Sed ut perspiciatis 1</a></li>
+          <li><a href="#">Sed ut perspiciatis 1</a></li>
+          <li class="sidebar-menu-level2"><h6>Sed ut perspiciatis Level 2</h6></li>    
+            <li class="sidebar-submenu-level2">
+               <ul>
+                  <li><a href="#">Sed ut perspiciatis 2</a></li>
+                  <li><a href="#">Sed ut perspiciatis 2</a></li>
+                  <li><a href="#">Sed ut perspiciatis 2</a></li>
+                  <li><a href="#">Sed ut perspiciatis 2</a></li>
+               </ul>
+            </li>      
+        </ul>
+      </li> 
+        <li class="sidebar-menu-level1"><h5>Sed ut perspiciatis Level 1-2</h5></li>
+      <li class="sidebar-submenu-level1">
+        <ul>
+          <li><a href="#">Sed ut perspiciatis 1</a></li>
+          <li><a href="#">Sed ut perspiciatis 1</a></li>
+          <li><a href="#">Sed ut perspiciatis 1</a></li>
+          <li><a href="#">Sed ut perspiciatis 1</a></li>
+          <li class="sidebar-menu-level2"><h6>Sed ut perspiciatis Level 2-2</h6></li>    
+            <li class="sidebar-submenu-level2">
+               <ul>
+                  <li><a href="#">Sed ut perspiciatis 2</a></li>
+                  <li><a href="#">Sed ut perspiciatis 2</a></li>
+                  <li><a href="#">Sed ut perspiciatis 2</a></li>
+                  <li><a href="#">Sed ut perspiciatis 2</a></li>
+               </ul>
+            </li>      
+        </ul>
+      </li>               
+    </ul>
+ 
+  </div>
+
+</nav>
+
+</body>
+</html>

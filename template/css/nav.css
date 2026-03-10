@@ -1,0 +1,133 @@
+.nav-container {
+  display: block;
+  width: 100%;
+  border: 1px solid #e7e7e7;
+  background-color: #FFFFFF;
+}
+
+.nav-container.home {
+  border: 0;
+  background-color: transparent;
+}
+
+.nav-container.pages {
+  border: 0;
+  background-color: #FFFFFF;
+}
+
+.nav-container.basic {
+  border: 0;
+  background-color: #FFFFFF;
+}
+
+.nav-wrapper {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  padding: 0 15px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: var(--max-width);
+  height: 70px;
+  background-color: #ffffff;
+}
+/*
+.nav-mobile-wrapper {
+  display: none;
+  position: relative;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  padding: 0 15px;
+  margin: 0 auto;
+  width: 100%;
+  height: 48px;
+  border: 1px solid #e7e7e7;
+  background-color: #FFFFFF;
+}
+*/
+.nav-wrapper.home {
+  background-color: transparent;
+}
+
+.nav-wrapper img {
+  width: auto;
+  height: 36px;
+}
+
+.nav-mobile-wrapper img {
+  width: auto;
+  height: 32px;
+}
+
+.nav-wrapper.pages {
+  height: 60px;
+  max-width: var(--max-width-large);
+}
+
+.nav-wrapper.basic {
+  height: 60px;
+  max-width: var(--max-width-large);
+}
+
+.top-wrapper.pages a  {
+  display: inline-block;
+  width: auto;
+  height: 24px;
+}
+
+.top-wrapper.basic a  {
+  display: inline-block;
+  width: auto;
+  height: 24px;
+}
+
+.top-wrapper.pages img {
+  display: block;
+  width: auto;
+  height: 24px;
+}
+
+.top-wrapper.basic img {
+  display: block;
+  width: auto;
+  height: 24px;
+}
+
+.nav-wrapper.pages > a {display: inline-block;margin-top: 8px;}
+.nav-wrapper.pages > a > img {height: 40px;}
+
+.nav-wrapper.basic > a {display: inline-block;margin-top: 8px;}
+.nav-wrapper.basic > a > img {height: 40px;}
+
+/*.top-section > .nav-container, .top-section > .top-container,
+.top-section > .nav-container > .nav-wrapper {
+  background-color: transparent;
+}*/
+
+.horizontal-menu {
+  display: inline-block;
+  background-color: #FFFFFF;
+  width: auto;
+  padding: 30px 30px;
+}
+
+
+
+.nav-wrapper.home .logo-nav, .nav-wrapper.pages .logo-nav, .nav-wrapper .logo-nav {
+  display:  none;
+  width: auto;
+  height: 36px;
+}
+
+.nav-wrapper.home .logo-nav, .nav-wrapper.basic .logo-nav, .nav-wrapper .logo-nav {
+  display:  none;
+  width: auto;
+  height: 36px;
+}

@@ -1,0 +1,287 @@
+@import url(top.css);
+@import url(nav.css);
+@import url(sidebar-panel.css);
+@import url(header.css);
+@import url(breadcrumbs.css);
+@import url(burger.css);
+@import url(grid.css);
+@import url(content-grid.css);
+@import url(content.css);
+@import url(blog.css);
+@import url(element.css);
+@import url(simple-faq.css);
+@import url(panel-menu.css);
+@import url(sidebar-menu.css);
+@import url(search.css);
+@import url(search-modal.css);
+
+@import url(footer.css);
+@import url(radiobtn.css);
+@import url(top-scroll.css);
+@import url(modal.css);
+@import url(timer.css);
+@import url(media.css);
+
+:root {
+  --color-a: #FDB32F;
+  --color-b: #E8A42B;
+  --color-c: #BD8711;
+  --color-d: #116CB1;
+  --color-e: #212D69;
+  --color-f: #101D49;
+  --color-g: #0F0E0E;
+  --color-h: #333333;
+  --color-i: #4D4D4D;
+  --color-j: #b1b1b1;
+  --color-k: #D8DFED;
+  --color-l: #000000;
+  --color-m: #E8A921;
+
+  --color-body-bg: #FFFFFF;
+  --color-body-fonts: #333333;
+  --color-header: #333333;
+  --color-top-bg: #FFFFFF;
+  --color-top-nav-bg: #FFFFFF;
+  --color-content-bg: #0F0E0E;
+  --color-content-fonts: #0F0E0E;
+  --color-page-bg: #FFFFFF;
+  --color-page-fonts: #FFFFFF;
+  --color-sidebar-bg: #FFFFFF; 
+  --color-sidebar-fonts: #FFFFFF; 
+  --color-footer-bg1: #b1b1b1;
+  --color-footer-bg2: #9c9c9c;
+  --color-footer-fonts: #333;
+  --color-list-bg: #9c9c9c;
+  --color-list-fonts: #333;
+  --color-cite-bg: #E5EAF3;
+  --color-cite-br: #B1B9C9;
+  --color-cite-fonts: #333;
+  --color-check-bg1: #ffffff;
+  --color-check-bg2: #212D69;
+
+
+  --max-width: 1200px;
+  --max-width-large: 1140px;
+  --max-width-medium: 1000px;
+  --max-width-small: 970px;
+  --width-menu: 230px;
+  --font-nav: 'Roboto Condensed';
+  --font-subnav: 'Nunito Sans';
+  --font-sidebar-nav: 'Roboto Condensed';
+  --font-sidebar-subnav: 'Nunito Sans';
+  --font-panel-nav: 'Roboto Condensed';
+  --font-panel-subnav: 'Nunito Sans';
+  --font-content: 'Nunito Sans';
+  --font-btn: 'Roboto Condensed';
+  --font-h1: 'Roboto Condensed';
+  --font-h2: 'Roboto Condensed';
+  --font-h3: 'Roboto Condensed';
+  --font-h4: 'Roboto Condensed';
+  --font-h5: 'Roboto Condensed';
+  --font-h6: 'Roboto Condensed';
+  --font-size-content: 16px;
+  --font-size-pages: 16px;
+  --font-size-nav: 17px;
+  --font-size-subnav: 16px;
+  --font-size-sidebar: 16px;
+  --font-size-h1: 32px;
+  --font-size-h2: 24px;
+  --font-size-h3: 20px;
+  --font-size-h4: 17px;
+  --font-size-h5: 16px;
+  --font-size-h6: 14px;
+  --radiobtn-size: 18px;
+  --checkbox-size: 20px;
+}
+
+ *, ::after, ::before {
+  box-sizing: border-box;
+} 
+
+ol, ul {
+  list-style: none;
+}
+
+body, dd, dl, figcaption, figure, h1, h2, h3, h4, h5, h6, li, ol, ul, p, span {
+  margin: 0;
+  padding: 0;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+input, input:active, input:focus, textarea:focus, select:focus,
+input:hover, select, select:active, select:focus, select:hover {
+  outline: 0;
+  outline-offset: 0;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:after, blockquote:before, q:after, q:before {
+ /* content: '';*/
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+
+body {
+  position: relative;
+  background-color: var(--color-body-bg);
+  color: var(--color-body-fonts);
+  font-family: var(--font-content);
+  font-weight: 400;
+  font-style: normal;
+  font-size: var(--font-size-content);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+.zero-gap {gap: 0;}
+.small-gap {gap: 7.5px;}
+.mid-gap {gap: 15px;}
+.middle-gap {gap: 30px;}
+.big-gap {gap: 40px;}
+.max-gap {gap: 50px;}
+
+.indent {padding: 7.5px 0;}
+.indent-zero {padding:0 15px;}
+.indent-small {padding: 3.5px 15px;}
+.indent-mid {padding: 7.5px 15px;}
+.indent-middle {padding: 15px 15px;}
+.indent-big {padding: 20px 15px;}
+
+a {text-decoration: none;}
+
+h1 {
+   font-family: var(--font-h1);
+   font-weight: bold;
+   font-size: var(--font-size-h1);
+   font-style: normal;
+   color: var(--color-g);
+   display: inline-block;
+}
+
+h2 {
+   font-family: var(--font-h2);
+   font-weight: bold;
+   font-size: var(--font-size-h2);
+   font-style: normal;
+   color: var(--color-g);
+   display: inline-block;
+}
+
+h3 {
+   font-family: var(--font-h3);
+   font-weight: bold;
+   font-size: var(--font-size-h3);
+   font-style: normal;
+   color: var(--color-g);
+   display: inline-block;
+}
+
+h4 {
+   font-family: var(--font-h4);
+   font-weight: bold;
+   font-size: var(--font-size-h4);
+   font-style: normal;
+   color: var(--color-g);
+   display: inline-block;
+}
+
+h5 {
+   font-family: var(--font-h5);
+   font-weight: bold;
+   font-size: var(--font-size-h5);
+   font-style: normal;
+   color: var(--color-h);
+   display: inline-block;
+   margin-bottom: 7px;
+}
+
+h6 {
+   font-family: var(--font-h6);
+   font-weight: bold;
+   font-size: var(--font-size-h6);
+   font-style: italic;
+   color: var(--color-g);
+   display: inline-block;
+}
+
+.container {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+}
+.container.home {
+  max-width: var(--max-width);
+}
+.container.pages {
+  max-width: var(--max-width-large);
+}
+.container.basic {
+  max-width: var(--max-width-large);
+}
+
+.wrapper {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+}
+.wrapper.home {
+  max-width: var(--max-width);
+}
+.wrapper.pages {
+  max-width: var(--max-width-large);
+}
+.wrapper.basic {
+  max-width: var(--max-width-large);
+}
+
+.wrapper-grid {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+}
+.wrapper-grid.home {
+  max-width: var(--max-width);
+}
+.wrapper-grid.pages {
+  max-width: var(--max-width-large);
+}
+.wrapper-grid.basic {
+  max-width: var(--max-width-large);
+}
+
+
+/*--------------------Удалить--------------------*/
+.pages-link {
+  display: block;
+  width: 30%;
+  margin: 30px auto;
+}
+.aggregate {
+  display: block;
+  width: 100%;
+  height: auto;
+  padding: 7px;
+  color: #000;
+  border: 1px solid #000;
+}
+.yellow {background-color: yellow;}
+.green {background-color: green;}
+.blue {background-color: blue;}
+.red {background-color: red;}
+.purple {background-color: purple;}
+.orangered {background-color: orangered;}
+.grey {background-color: grey;}
+/*----------------------------------------------*/

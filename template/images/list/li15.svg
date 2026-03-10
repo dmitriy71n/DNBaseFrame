@@ -1,0 +1,19 @@
+<svg clip-rule="evenodd" fill-rule="evenodd" image-rendering="optimizeQuality" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" version="1.1" viewBox="0 0 2601.3 2601.3" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .fil1 {fill:#3C488C}
+    .fil0 {fill:#FF9900}
+   ]]>
+  </style>
+ </defs>
+ 
+  
+  
+   <g id="a">
+    <path class="fil0" d="m1852.4 2049.5-551.8 551.8-551.8-551.8 551.8-551.8 551.8 551.8zm-1103.6-1497.7 551.8-551.81 551.8 551.81-551.8 551.8-551.8-551.8z"/>
+    <path class="fil1" d="m-0 1300.6 551.8-551.8 551.8 551.8-551.8 551.8-551.8-551.8zm2049.5-551.8 551.81 551.8-551.81 551.8-551.8-551.8 551.8-551.8z"/>
+   </g>
+  
+ 
+</svg>

@@ -1,0 +1,48 @@
+@media only screen and (max-width: 992px){
+  .cells-4fr {grid-template-columns: repeat(2,1fr);}
+  .cells-5fr, .cells-6fr {grid-template-columns: repeat(3,1fr);}
+  .cells-8fr  {grid-template-columns: repeat(4,1fr);}
+  .nav-wrapper.home .logo-nav, .nav-wrapper.pages .logo-nav, .nav-wrapper .logo-nav {display: inline-block !important;}
+  .nav-wrapper.home .logo-nav, .nav-wrapper.basic .logo-nav, .nav-wrapper .logo-nav {display: inline-block !important;}
+  .top-container.home, .top-container.pages {display: none !important;}
+  .top-container.home, .top-container.basic {display: none !important;}
+  .nav-wrapper.home .burger.home, .nav-wrapper.pages .burger, .nav-wrapper .burger  {display: inline-block !important;}
+  .nav-wrapper.home .burger.home, .nav-wrapper.basic .burger, .nav-wrapper .burger  {display: inline-block !important;}
+  .nav-wrapper.home > ul, .nav-wrapper.pages > ul, .nav-wrapper > ul {display: none !important;}
+  .nav-wrapper.home > ul, .nav-wrapper.basic > ul, .nav-wrapper > ul {display: none !important;}
+  .wrapper-search input {width: 75%;}
+}
+@media only screen and (max-width: 768px){
+  .wrapper-search input {width: 90%;}
+  .cells-3fr, .cells-4fr, .cells-5fr, .cells-6fr, .cells-8fr  {grid-template-columns: repeat(2,1fr);} 
+  .cells-3fr-a {grid-template-columns: 100%;} 
+  .cells-1fr-2fr, .cells-1fr-3fr {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-areas: "cell-long" "cell-left";
+  }
+  .cells-2fr-1fr, .cells-3fr-1fr {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-areas:"cell-long" "cell-right";
+  }
+  .cells-1fr-2fr-1fr {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-areas: "cell-long" "cell-left" "cell-right";
+  }
+}
+@media only screen and (max-width: 576px){
+  .cells-3fr, .cells-4fr, .cells-5fr, .cells-6fr  {grid-template-columns: repeat(2,1fr);} 
+  .wrapper-search input {width: 89%;}
+}
+@media only screen and (max-width: 480px){
+  .cells-2fr, .cells-3fr, .cells-4fr, .cells-5fr, .cells-6fr, .cells-8fr {grid-template-columns: 100%;}
+  .wrapper-search input {width: 92%;}
+}
+@media only screen and (max-width: 320px){}
+
+
+
+
+

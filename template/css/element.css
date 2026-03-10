@@ -1,0 +1,39 @@
+.st-list  {
+  display: block;
+  max-width: 400px;
+  padding-bottom: 25px;
+  background-image: url(../images/bg-cell.svg);
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-size: auto 100px;
+}
+
+.st-list  ul {
+  display: block;
+  margin: 15px 0 0 0;
+  list-style: none;
+}
+
+.st-list li {
+  padding-left: 25px;
+  background-image: url(../images/list/li26.svg);
+  background-repeat: no-repeat;
+  background-position: top 6px left;
+  background-size: auto 14px;
+  color: var(--color-list-fonts);
+}
+
+.st-quote {
+  display: block;
+  margin: 10px 0;
+  padding: 10px 15px 10px 45px;
+  background-color: var(--color-cite-bg);
+  background-image: url(../images/quote/qt101.svg);
+  background-repeat: no-repeat;
+  background-position: top 15px left 7px;
+  background-size: 25px auto;
+  color: var(--color-cite-fonts);
+  font-style: italic;
+  border-left: 5px solid var(--color-cite-br);
+  border-radius: 7px;
+}

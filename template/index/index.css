@@ -1,0 +1,49 @@
+/* ========================================
+   Index - Главная страница демо
+   ======================================== */
+
+/* Заголовок DN Base Frame */
+.index-title {
+  font-family: 'Roboto Condensed';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  color: #000;
+  margin-bottom: 30px;
+}
+
+/* Ячейка-ссылка (дополнение к .item) */
+.index-item {
+  background-color: #ececfd;
+  border-radius: 5px;
+  padding: 20px 15px;
+  text-decoration: none;
+  transition: .2s;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.index-item:hover {
+  background-color: #d8d8f5;
+  transform: translateY(-2px);
+}
+
+/* Заголовок ячейки */
+.index-item h4 {
+  font-family: 'Roboto Condensed';
+  font-weight: 600;
+  font-size: 17px;
+  color: #0F0E0E;
+  margin: 0;
+  text-decoration: none;
+}
+
+/* Пустая ячейка (с фоном, без текста) */
+.index-item.empty {
+  background-color: #ececfd;
+  border-radius: 5px;
+  pointer-events: none;
+}

@@ -1,0 +1,134 @@
+.top-section {
+  display: block;
+  position: fixed;
+  width: 100%;
+  z-index: 999999;
+}
+
+
+
+
+/**********************************************/
+.top-section.pages{
+  display: block;
+  position: fixed;
+  width: 100%;
+  z-index: 999999;
+}
+
+.top-section.basic{
+  display: block;
+  position: fixed;
+  width: 100%;
+  z-index: 999999;
+}
+
+.top-container {
+  display: block;
+  width: 100%;
+  background-color: #ffffff;
+}
+
+.top-container.home {
+  background-color: transparent;
+}
+
+.top-container.pages {
+  background-color: #e6e6e6;
+}
+
+.top-container.basic {
+  background-color: transparent;
+}
+
+.top-wrapper.pages {
+  background-color: transparent;
+  height: 30px;
+  max-width: var(--max-width-large);
+}
+
+.top-wrapper.basic {
+  background-color: transparent;
+  height: 30px;
+  max-width: var(--max-width-large);
+}
+
+.top-wrapper {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  padding: 0 15px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: var(--max-width);
+  height: 60px;
+}
+.top-wrapper > .item-left {
+    display: inline-block;
+    width: auto;
+}
+.top-wrapper > .item-left img {
+  width: auto;
+  height: 36px;
+}
+.top-wrapper > .item-middle {
+    display: inline-block;
+    width: auto;
+}
+
+.top-wrapper > .item-right  {
+    display: inline-block;
+    width: auto;
+}
+
+
+
+.top-wrapper > .item-right, .top-wrapper > .item-middle {
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 7px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: auto;
+    height: auto;
+}
+.top-wrapper a.social_networks {
+  display: inline-block;
+  width: auto;
+  height: auto;
+}
+.top-wrapper a.social_networks > img {
+   display: block;
+  width: 30px;
+  height: 30px;
+}
+
+.top-wrapper a.phone {
+  color: var(--color-g);
+  font-weight: 400;
+  font-size: 16px;
+  text-decoration: none;
+  background-image: url("../images/icons/sphone.svg");
+  background-position: left 0 center;
+  background-size: auto 18px ;
+  background-repeat: no-repeat;
+  padding-left: 16px;
+}
+
+.top-wrapper.home a.phone {
+  color: #fff;
+  font-weight: 300;
+  font-size: 16px;
+  text-decoration: none;
+  background-image: url("../images/icons/sphone.svg");
+  background-position: left 0 center;
+  background-size: auto 18px ;
+  background-repeat: no-repeat;
+  padding-left: 16px;
+}

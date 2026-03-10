@@ -1,0 +1,59 @@
+.breadcrumb-wrapper {
+  display: block;
+  width: 100%;
+  background-color: var(--color-j);
+}
+
+.header-page-wrapper > ol.breadcrumb, .header-page-wrapper > ol.breadcrumb a {
+  justify-content: flex-end;
+  color: #FFFFFF;
+  font-weight: 600;
+  transition: .25s;
+}
+
+.header-page-wrapper > ol.breadcrumb, .header-page-wrapper > ol.breadcrumb a:hover {
+  color: #bbbec4;
+}
+
+ol.breadcrumb {
+  display: flex;
+  gap: 5px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  width: auto;
+  max-width: var(--max-width-large);
+  color: #181834;
+  position: relative;
+  margin: 0 auto;
+  padding: 25px 15px;
+  font-size: 17px;
+}
+ol.breadcrumb.right {justify-content: flex-end;}
+
+ol.breadcrumb > li:first-child::before {
+  content: "";
+}
+
+ol.breadcrumb > li::before {
+  content: '/ ';
+}
+
+ol.breadcrumb > li > a {
+  color: #181834;
+  font-size: 16px;
+  font-style: normal;
+  text-decoration: none;
+  transition: .2s;
+  cursor: pointer;
+}
+
+ol.breadcrumb > li > a:hover {
+  color: var(--color-c);
+}
+
+ol.breadcrumb > i.active {
+  color: var(--color-c);
+}

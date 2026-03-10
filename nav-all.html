@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<base href="https://fm.dev.lan/">
+<title>Nav All HTML</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="template/images/favicon/favicon.ico" rel="shortcut icon" type="image/x-icon">
+<link href="template/images/favicon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+<link href="template/images/favicon/favicon-64x64.png" rel="icon" sizes="64x64" type="image/png">
+<link href="template/css/nav-right.css" rel="stylesheet">
+<link href="template/css/main.css" rel="stylesheet">
+<link href="template/css/fonts.css" rel="stylesheet">
+<link href="template/css/font-awesome.min.css" rel="stylesheet">
+<script src="template/js/jquery.min.js"></script>
+<script>
+  // Подключаем лишний хлам
+$(function() {
+       $('.nav-wrapper > ul').load('parts/header-menu.tpl');
+       $('.connect-menu').load('parts/panel-menu.tpl');
+});
+</script>
+
+
+<script>
+  // Кнопка бургер
+$(function() {
+  let burger = $('.burger');
+  let sidebarPanel = $('.sidebar-panel');
+  let closeSidebarPanel = $('.close-sidebar-panel');
+  burger.click(function() {
+    burger.toggleClass('active');
+  })
+  burger.click(function() {
+    sidebarPanel.toggleClass('active');
+  })
+  closeSidebarPanel.click(function() {
+    sidebarPanel.toggleClass('active');
+    burger.removeClass('active');
+  })
+  $(window).resize(function() {   
+    burger.removeClass('active'); 
+    sidebarPanel.removeClass('active'); 
+  });
+});
+</script>
+
+<script>
+  // Горизонтальная навигация
+$(function() {   
+ let topHeaderContainer = $('.top-container.basic');
+ let navHeaderContainer = $('.nav-container.basic');
+ let navHeaderWrapper = $('.nav-wrapper.basic');
+ let navHeaderLogo = $('.nav-wrapper.basic img');
+ let horizontalMenu = $('.nav-wrapper.basic > ul');
+ let burgerBtn = $('.nav-wrapper.basic .burger');
+$(window).scroll(function(){if ($(this).scrollTop() > 100){
+    topHeaderContainer.slideUp(100);
+    navHeaderContainer.css({
+      'position': 'fixed',
+      'width': '100%',
+      'top': '0',
+      'box-shadow': ' 0px 5px 5px rgb(133 132 157 / 40%)',
+      'transition': '.5s',
+      'z-index': '7777'
+    });
+    navHeaderWrapper.css({
+      'height': '48px',
+      'transition': '.5s'
+    });
+    navHeaderLogo.css({
+      'width': 'auto',
+      'height': '32px',
+      'transition': '.5s'
+    });
+    horizontalMenu.css({'display': 'none'});
+    burgerBtn.css({'display': 'block'});
+	} else {
+	topHeaderContainer.slideDown(10);
+    navHeaderContainer.css({
+      'position': 'relative',
+      'box-shadow': 'none',
+      'transition': '.5s',
+      'z-index': '7777'
+    });
+    navHeaderWrapper.css({
+      'height': '60px',
+      'transition': '.5s'
+    });
+    navHeaderLogo.css({
+      'width': 'auto',
+      'height': '36px',
+      'transition': '.5s'
+    });
+    horizontalMenu.css({'display': 'inline-flex'});
+    burgerBtn.css({'display': 'none'});
+    }     
+ });
+});
+</script>
+
+<script>
+// Аккордеон меню — универсальный скрипт для всех уровней panel-menu
+$(function() {
+  // Функция для закрытия меню и всех вложенных подменю
+  function closeMenuAndChildren($menu) {
+    $menu.removeClass('active');
+    const $submenu = $menu.next('[class*="panel-submenu"]');
+    $submenu.slideUp(300);
+
+    // Закрываем все вложенные активные меню
+    $submenu.find('[class*="panel-menu-level"].active').each(function() {
+      closeMenuAndChildren($(this));
+    });
+  }
+
+  // Аккордеон меню — универсальный скрипт для всех уровней
+  $('.wrap-menu').on('click', '[class*="panel-menu-level"]', function(e) {
+    // Игнорируем level0
+    if ($(this).hasClass('panel-menu-level0')) return;
+
+    e.stopPropagation();
+
+    const $clicked = $(this);
+    const $submenu = $clicked.next('[class*="panel-submenu"]');
+    const isOpening = !$clicked.hasClass('active');
+
+    // Определяем уровень (1, 2, 3...)
+    const levelMatch = $clicked.attr('class').match(/panel-menu-level(\d+)/);
+    if (!levelMatch) return;
+    const level = parseInt(levelMatch[1]);
+
+    if (isOpening) {
+      // Закрываем другие меню на этом же уровне
+      $clicked.parent().find('.panel-menu-level' + level + '.active').each(function() {
+        closeMenuAndChildren($(this));
+      });
+
+      // Если уровень > 1, закрываем другие подменю на этом уровне внутри текущего родителя
+      if (level > 1) {
+        $clicked.closest('[class*="panel-submenu"]').find('.panel-menu-level' + level + '.active').each(function() {
+          closeMenuAndChildren($(this));
+        });
+      }
+
+      // Открываем clicked
+      $clicked.addClass('active');
+      $submenu.slideDown(300);
+    } else {
+      // Закрываем clicked и все вложенные меню
+      closeMenuAndChildren($clicked);
+    }
+
+    return false;
+  });
+});
+</script>
+
+
+<script>
+  $(function() {
+    // Top Scroll
+    $(window).scroll(function() {
+      if ($(this).scrollTop() > 300) {
+        $('.top-scroll').fadeIn(300);
+      } else {
+        $('.top-scroll').fadeOut(300);
+      }
+    });
+    $('.top-scroll').click(function() {
+      $('html, body').animate({ scrollTop: 0 }, { duration: 800, easing: 'linear' });
+      return false;
+    });
+  });
+</script>
+
+
+</head>
+<body>
+
+<!-- Header: Top секция -->
+<section class="top-section">
+
+    <div class="top-container basic">	 
+      <div class="top-wrapper basic">
+        <div class="item-left">
+          <a href="tel:+380999999999" class="phone">+38 (099) 999-99-99</a>
+        </div>
+        <div class="item-middle">
+          <a href="https://t.me/telegram" target="_blank"><img src="template/images/icons/telegram.svg" alt="Telegram"></a>
+          <a href="viber://chat?number=%2B380999999999"><img src="template/images/icons/viber.svg" alt="Viber"></a>
+          <a href="https://twitter.com/" target="_blank"><img src="template/images/icons/tvitter.svg" alt="Twitter"></a>
+          <a href="https://www.instagram.com/" target="_blank"><img src="template/images/icons/instagram.svg" alt="In 100 gram"></a>
+        </div>
+        <div class="item-right">
+          <a href="tel:+380999999999" class="phone">+38 (099) 999-99-99</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav-container basic">
+      <div class="nav-wrapper basic">
+      <img src="resources/images/logo.svg" alt="Logo">     
+      <ul></ul> 
+      <div class="burger"><span></span><span></span><span></span></div>
+    </div>
+  </div>
+
+</section>
+
+<!-- Header -->
+<header class="header-wrapper-basic">
+
+</header>
+
+
+<!-- Sidebar -->
+<div class="sidebar-panel">
+    <div class="sidebar-top">
+      <img src="resources/images/logoG.svg" alt="Logo">
+      <button class="close-sidebar-panel"></button>
+    </div>
+  <!-- Аккордеон меню -->
+  <nav class="wrap-menu">
+
+  <div class="panel-menu">
+
+  <ul class="panel-nav-item">
+    <li class="panel-menu-level0"><a href="https://work.xampp.lan/#">Sed ut perspiciatis Level 0</a></li>
+    <li class="panel-menu-level0"><a href="https://work.xampp.lan/#">Sed ut perspiciatis Level 0</a></li>
+  </ul>    
+            
+    <ul class="panel-menu-item">   
+      <li class="panel-menu-level1"><h5>Sed ut perspiciatis Level 1</h5></li>
+      <li class="panel-submenu-level1">
+        <ul>
+          <li><a href="#">Sed ut perspiciatis 1</a></li>
+          <li><a href="#">Sed ut perspiciatis 1</a></li>
+          <li><a href="#">Sed ut perspiciatis 1</a></li>
+          <li><a href="#">Sed ut perspiciatis 1</a></li>
+          <li class="panel-menu-level2"><h6>Sed ut perspiciatis Level 2</h6></li>    
+            <li class="panel-submenu-level2">
+               <ul>
+                  <li><a href="#">Sed ut perspiciatis 2</a></li>
+                  <li><a href="#">Sed ut perspiciatis 2</a></li>
+                  <li><a href="#">Sed ut perspiciatis 2</a></li>
+                  <li><a href="#">Sed ut perspiciatis 2</a></li>
+               </ul>
+            </li>      
+        </ul>
+      </li> 
+        <li class="panel-menu-level1"><h5>Sed ut perspiciatis Level 1-2</h5></li>
+      <li class="panel-submenu-level1">
+        <ul>
+          <li><a href="#">Sed ut perspiciatis 1</a></li>
+          <li><a href="#">Sed ut perspiciatis 1</a></li>
+          <li><a href="#">Sed ut perspiciatis 1</a></li>
+          <li><a href="#">Sed ut perspiciatis 1</a></li>
+          <li class="panel-menu-level2"><h6>Sed ut perspiciatis Level 2-2</h6></li>    
+            <li class="panel-submenu-level2">
+               <ul>
+                  <li><a href="#">Sed ut perspiciatis 2</a></li>
+                  <li><a href="#">Sed ut perspiciatis 2</a></li>
+                  <li><a href="#">Sed ut perspiciatis 2</a></li>
+                  <li><a href="#">Sed ut perspiciatis 2</a></li>
+               </ul>
+            </li>      
+        </ul>
+      </li>               
+    </ul>
+ 
+  </div>
+
+      <div class="sidebar-icons">
+          <a href="https://t.me/telegram" target="_blank" class="social_networks"><img src="template/images/icons/telegram.svg" alt="Telegram"></a>
+          <a href="viber://chat?number=%2B380999999999" class="social_networks"><img src="template/images/icons/viber.svg" alt="Viber"></a>
+          <a href="https://twitter.com/" target="_blank" class="social_networks"><img src="template/images/icons/tvitter.svg" alt="Twitter"></a>
+          <a href="https://www.instagram.com/" target="_blank" class="social_networks"><img src="template/images/icons/instagram.svg" alt="In 100 gram"></a>
+      </div>
+  </div>
+
+<div style="height: 1920px;"></div>
+
+<!-- Top скролл -->
+<div class="top-scroll"></div>
+</body>
+</html>

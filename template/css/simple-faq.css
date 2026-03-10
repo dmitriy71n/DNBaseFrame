@@ -1,0 +1,49 @@
+.faq {
+	display: block;
+	width: 100%;
+}
+
+.faq-item {
+	display: block;
+	width: 100%;
+	margin-bottom: 2px;
+}
+
+.faq-header, .faq-header.active {
+	display: block;
+	position: relative;
+	width: 100%;
+	padding: 12px 12px 12px 30px;
+	border: 1px solid  var(--color-g);
+	color: var(--color-a);
+	font-size: 18px;
+	font-weight: 700;
+	cursor: pointer;
+	transition: .2s;
+}
+
+/*.faq-header.active {background-color: #FD4832;}*/
+
+.faq-header::before, .faq-header.active::before {
+	content: '';
+	position: absolute;
+	top: 32%;
+	left: 7px;
+	width: 18px;
+	height: 18px;
+	background-image: url('../images/list/li-active.svg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 10px auto;
+	transition: .2s;
+}
+
+.faq-header.active::before {
+	transform: rotate(-90deg);
+}
+
+.faq-content {
+	padding: 15px;
+	display: none;
+}
+
