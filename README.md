@@ -44,6 +44,7 @@ fm.dev.lan/
 | `footer.html` | Подвал (отдельно) |
 | `modal.html` | Модальное окно |
 | `timer.html` | Таймер (модальное окно по времени) |
+| `tabs.html` | Табы |
 | `slider.html` | Слайдер |
 | `checkbox.html` | Checkbox и Radiobutton |
 
@@ -81,6 +82,7 @@ fm.dev.lan/
 | `modal.css` | Модальные окна |
 | `timer.css` | Таймер |
 | `top-scroll.css` | Кнопка "Наверх" |
+| `ttabs.css` | Табы |
 | `radiobtn.css` | Radiobutton стили |
 | `slide.css` | Слайдер |
 | `fade.css` | Fade анимации |
