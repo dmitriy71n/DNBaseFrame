@@ -16,6 +16,7 @@
             <li class="tab-item active" data-tab="tab-1">Заголовок 1</li>
             <li class="tab-item" data-tab="tab-2">Заголовок 2</li>
             <li class="tab-item" data-tab="tab-3">Заголовок 3</li>
+            <li class="tab-item" data-tab="tab-4">Заголовок 4</li>
         </ul>
 
         <div class="tab-content active" id="tab-1">
@@ -23,17 +24,21 @@
         </div>
 
         <div class="tab-content" id="tab-2">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris.
+            Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris.
         </div>
 
         <div class="tab-content" id="tab-3">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris.
+            Sed nisi. Praesent libero. Sed cursus ante dapibus diam. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris.
+        </div>
+
+        <div class="tab-content active" id="tab-4">
+            Praesent libero. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris.
         </div>
     </div>
 
     <script src="template/js/jquery.min.js"></script>
     <script>
-        $(document).ready(function() {
+        $(function() {
             $('.tab-item').on('click', function() {
                 var tabId = $(this).data('tab');
                 
