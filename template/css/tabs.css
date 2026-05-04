@@ -2,13 +2,18 @@
             width: 100%;
             position: relative;
         }
-
+            
         .tabs-list {
-            display: flex;
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            border-bottom: 1px solid #f8ffae;
+          display: flex;
+          position: relative;
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: flex-start;
+          align-items: flex-start;
+          list-style: none;
+          padding: 0;
+          margin: 0;
+          border-bottom: 1px solid #f8ffae;
         }
 
         .tab-item {
@@ -44,4 +49,15 @@
         .tab-content:not(.active) {
             display: none;
         }
-        
+
+@media only screen and (max-width: 768px){
+          .tabs-list {
+          flex-direction: column;
+          width: 100%;
+        }
+
+.tab-item {
+    width: 100%;
+    box-sizing: border-box;
+    }
+}
